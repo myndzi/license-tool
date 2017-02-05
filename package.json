@@ -1,0 +1,26 @@
+{
+  "name": "spdx-license-tool",
+  "version": "1.0.0",
+  "description": "",
+  "main": "convert.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/myndzi/license-tool.git"
+  },
+  "author": "Kris Reeves",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/myndzi/license-tool/issues"
+  },
+  "homepage": "https://github.com/myndzi/license-tool#readme",
+  "dependencies": {
+    "blessed": "^0.1.81",
+    "bluebird": "^3.4.7",
+    "pretty-data": "^0.40.0",
+    "xlsx": "^0.8.2",
+    "xml-escape": "^1.1.0"
+  }
+}
