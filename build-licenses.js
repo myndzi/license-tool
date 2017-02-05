@@ -10,7 +10,29 @@ var fs = require('fs'),
 var normalize = require('./normalize');
 
 var XLSX = require('xlsx');
-var workbook = XLSX.readFile(PATH.join(__dirname, 'license-list', 'spdx_licenselist_v2.3.xls'));
+
+var filename, workbook;
+
+
+try {
+    filename = fs.readdirSync('./license-list').find(function (v) {
+        return /^spdx_licenselist_.*\.xls$/.test(v);
+    });
+    if (filename === void 0) {
+        console.log('Could not find license list XML');
+        process.exit(1);
+    }
+    workbook = XLSX.readFile(PATH.join(__dirname, 'license-list', filename));
+} catch (e) {
+    if (e.code === 'ENOENT') {
+        console.log('File not found: %s', abspath);
+    } else if (e.code === 'EACCES') {
+        console.log('No permission to read: %s', abspath);
+    } else {
+        console.log(e);
+    }
+    process.exit(1);
+}
 
 var data = workbook.Sheets.licenses;
 

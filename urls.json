@@ -1,0 +1,5 @@
+{
+    "MIT": ["http://en.wikipedia.org/wiki/MIT_License", "http://opensource.org/licenses/mit-license.php", "http://opensource.org/licenses/MIT"],
+    "BSD-2-Clause": ["http://opensource.org/licenses/bsd-license.php"],
+    "LGPL-3.0": ["http://www.gnu.org/licenses/lgpl.html"]
+}
